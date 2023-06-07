@@ -8,14 +8,14 @@ public class Text_name_manager : MonoBehaviour
     public int HP_value, Sanity_value;
     public TextMeshProUGUI HPtextValue, SanitytextValue, storytextValue;
     public string startofstory;
-    public Gameobject level1Choices;
+    public GameObject level1Choices;
     
     // Start is called before the first frame update
     void Start()
     {
         HP_value = 10;
         Sanity_value = 10;
-        startofstory "I woke up then back to sleep";
+        startofstory = "I woke up then back to sleep";
     }
 
     // Update is called once per frame
@@ -43,4 +43,17 @@ public class Text_name_manager : MonoBehaviour
         HP_value -= 10;
         startofstory = "You brush to well, you started to bleed";
     }
+    public void ExitButton() 
+    {
+        Application.Quit();
+    }
+    public void StartButton()
+    {
+        level1Choices.SetActive(true);
+        HPtextValue.SetActive(true);
+        HP_value.SetActive(true);
+        SanitytextValue.SetActive(true);
+        Sanity_value.SetActive(true);
+    }
 }
+
